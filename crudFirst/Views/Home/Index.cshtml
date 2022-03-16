@@ -1,0 +1,61 @@
+﻿@model List<crudFirst.Models.class1>
+
+@{
+    ViewBag.Title = "Home Page";
+
+
+}
+
+<link href="~/Content/css.css" rel="stylesheet" />
+
+
+<br>
+<h1>Student's Data </h1>
+
+<table class="table table-hover table-bordered  table-responsive table-secondary">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>DOB</th>
+        <th>ADDRESS</th>
+        <th>Edit / Delete</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr class="table-active ">
+            <td>@item.id</td>
+            <td>@item.name</td>
+            <td>@item.email</td>
+            <td> @item.DOB</td>
+            <td>@item.address</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <span class="badge bg-primary">Edit</span>
+                    <span class="badge bg-light">Delete</span>
+            </td>
+
+        </tr>
+
+
+    }
+    
+
+</table>
+<tr>
+    <button type="button" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-primary">Clear</button>
+</tr>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
